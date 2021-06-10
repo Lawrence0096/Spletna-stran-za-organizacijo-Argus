@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <style>
+    /* common styles */
+              * {
+                padding: 0;
+                margin: 0;
+              }
+
+              body {
+                width: 100vw;
+                height: 100vh;
+                overflow: hidden;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #222831;
+                font-family: sans-serif;
+              }
+
+              /* common styles end */
+
+              /* calculator */
+              .calculator {
+                width: 300px;
+                padding-bottom: 15px;
+                border-radius: 7px;
+                background-color: #000;
+                box-shadow: 5px 8px 8px -2px rgba(0, 0, 0, 0.61);
+              }
+              /* calculator style end */
+
+              /* display */
+              .display {
+                width: 100%;
+                height: 80px;
+                border: none;
+                box-sizing: border-box;
+                padding: 10px;
+                font-size: 2rem;
+                background-color: #00ff44;
+                color: #000;
+                text-align: right;
+                border-top-left-radius: 7px;
+                border-top-right-radius: 7px;
+              }
+
+              /* display style end */
+
+              /* row */
+              .row {
+                display: flex;
+                justify-content: space-between;
+              }
+              /* row style end */
+
+              /* button */
+              button {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                border: none;
+                outline: none;
+                font-size: 1.5rem;
+                background-color: #222;
+                color: #fff;
+                margin: 10px;
+              }
+
+              button:hover {
+                cursor: pointer;
+              }
+
+              /* button style end */
+
+              /* operator */
+              .operator {
+                background-color: #00ff44;
+                color: #000;
+              }
+
+              /* operator style end */
+  </style>
+</head>
+<body>
+
+  <!-- calculator -->
+  <div class="calculator">
+
+    <!-- display -->
+    <input type="text" class="display" disabled>
+    <!-- keys -->
+    <div class="keys">
+      <!-- 4 rows of keys -->
+      <div class="row">
+        <button value="7">7</button>
+        <button value="8">8</button>
+        <button value="9">9</button>
+        <button value="+" class="operator">+</button>
+      </div>
+      <div class="row">
+        <button value="4">4</button>
+        <button value="5">5</button>
+        <button value="6">6</button>
+        <button value="-" class="operator">-</button>
+      </div>
+      <div class="row">
+        <button value="1">1</button>
+        <button value="2">2</button>
+        <button value="3">3</button>
+        <button value="*" class="operator">*</button>
+      </div>
+      <div class="row">
+        <button value="C" class="operator">C</button>
+        <button value="0">0</button>
+        <button value="/" class="operator">/</button>
+        <button value="=" class="operator">=</button>
+      </div>
+    </div>
+
+  </div>
+    <!-- calculator body ends -->
+    
+                <script type="text/javascript" >
+                  // select all the buttons
+              const buttons = document.querySelectorAll('button');
+              // select the <input type="text" class="display" disabled> element
+              const display = document.querySelector('.display');
+
+              // add eventListener to each button
+              buttons.forEach(function(button) {
+                button.addEventListener('click', calculate);
+              });
+
+              // calculate function
+              function calculate(event) {
+                // current clicked buttons value
+                const clickedButtonValue = event.target.value;
+
+                if (clickedButtonValue === '=') {
+                  // check if the display is not empty then only do the calculation
+                  if (display.value !== '') {
+                    // calculate and show the answer to display
+                    display.value = eval(display.value);
+                  }
+                } else if (clickedButtonValue === 'C') {
+                  // clear everything on display
+                  display.value = '';
+                } else {
+                  // otherwise concatenate it to the display
+                  display.value += clickedButtonValue;
+                }
+              }
+              
+  
+  </script>
+</body>
+</html>
+</body>
+</html>

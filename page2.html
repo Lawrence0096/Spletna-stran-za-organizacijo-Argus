@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <script
+    src="http://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.0.943/pdf.min.js">
+  </script>
+    <title>Document</title>
+    <style>
+
+              /* common styles end */
+
+              /* calculator */
+              .calculator {
+                width: 310px;
+                padding-bottom: 15px;
+                border-radius: 7px;
+                background-color: #000;
+                box-shadow: 5px 8px 8px -2px rgba(0, 0, 0, 0.61);
+                margin: 0 auto;
+              }
+              /* calculator style end */
+
+              /* display */
+              .display {
+                width: 100%;
+                height: 80px;
+                border: none;
+                box-sizing: border-box;
+                padding: 10px;
+                font-size: 2rem;
+                background-color: #fafafa;
+                color: #000;
+                text-align: right;
+                border-top-left-radius: 7px;
+                border-top-right-radius: 7px;
+              }
+
+              /* display style end */
+
+              /* row */
+              .row {
+                display: flex;
+                justify-content: space-between;
+              }
+              /* row style end */
+
+              /* button */
+              .row button {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                border: none;
+                outline: none;
+                font-size: 1.5rem;
+                background-color: #222;
+                color: #fff;
+                margin: 10px;
+              }
+
+              .row button:hover {
+                cursor: pointer;
+              }
+
+              /* button style end */
+
+              /* operator */
+              .operator {
+                background-color: #0099ff;
+                color: #000;
+              }
+
+              /* operator style end */
+
+    </style>
+</head>
+<body>
+    <div class="img_con"><img class="logo" src="./pic/lorem-new.png" alt="" class="pic"></div>
+    <header>
+        <nav class="nav_js" id="nav-id">
+            <ul class="nav__link" id="nav-id2">
+                <li><a href="index.html">Domov</a></li>
+                <li><a href="./page2.html">Storitve</a></li>
+                <li><a href="./page3.html">Cenik</a></li>
+                <li><a href="./page4.html">Blog</a></li>
+                <li><a href="./page5.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="cont1">
+        <h1>Popravljanje Mac in PC računalnikov</h1>
+    </div>
+    <div class="cont2">
+        <div class="cont2_1">
+            <h3>Premium storitve</h3>
+            <h1>150€</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, mollitia!</p>
+            <p>Lorem ipsum dolor sit amet consectetur.</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint.</p>
+        </div>
+        <div class="cont2_2">
+            <h3>Standartdne storitve</h3>
+            <h1>100€</h1>
+           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure, molestias.</p> 
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos, placeat!</p>
+        </div>
+        <div class="cont2_3">
+            <h3>Osnovne storitve</h3>
+            <h1>50€</h1>
+            <p>Lorem ipsum dolor sit amet consectetur.</p>  
+        </div>
+    </div>
+    <div class="PDF-cont">
+        <h3>Cenik</h3>
+        <div id="my_pdf_viewer">
+            <div id="canvas_container">
+                <canvas id="pdf_renderer"></canvas>
+            </div>
+     
+            <div id="navigation_controls">
+                <button id="go_previous">Previous</button>
+                <input id="current_page" value="1" type="number"/>
+                <button id="go_next">Next</button>
+            </div>
+            
+            <div id="zoom_controls">  
+                <button id="zoom_in">+</button>
+                <button id="zoom_out">-</button>
+            </div>
+        </div>
+    </div>
+        
+
+    <div class="calculator-cont">
+        <h2 id="cal-head">Izračunajte si strošek vašega naslednjega obiska</h2>
+        <div class="calculator">
+            
+            <input type="text" class="display" disabled>
+            <div class="keys">
+              <div class="row">
+                <button value="7">7</button>
+                <button value="8">8</button>
+                <button value="9">9</button>
+                <button value="+" class="operator">+</button>
+              </div>
+              <div class="row">
+                <button value="4">4</button>
+                <button value="5">5</button>
+                <button value="6">6</button>
+                <button value="-" class="operator">-</button>
+              </div>
+              <div class="row">
+                <button value="1">1</button>
+                <button value="2">2</button>
+                <button value="3">3</button>
+                <button value="*" class="operator">*</button>
+              </div>
+              <div class="row">
+                <button value="C" class="operator">C</button>
+                <button value="0">0</button>
+                <button value="/" class="operator">/</button>
+                <button value="=" class="operator">=</button>
+              </div>
+            </div>
+          </div>
+    </div>
+
+    <div class="cont3">
+        <div class="cont3_1">
+            <h2>Ostale storitve</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem, odio!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium?</p>
+            <p>Lorem ipsum dolor sit amet consectetur.</p>
+            <p>Lorem ipsum dolor sit.</p>
+        </div>
+        <div class="cont3_2">
+            <h2>Posebna ponudba</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+            <a href=""><p>Za več informacij kliknite tukaj</p></a>
+        </div>
+    </div>
+    <footer class="foot">
+        <p id="topP"> © 2020 GoEbits. All Rights Reserved |  Computer Repair Services</p> 
+         <div class="img_foot">
+             <a href="https://www.facebook.com/"><img id="facebook" src="./pic/Facebook_icon.svg.png" alt=""></a>
+             <a href="https://twitter.com/"><img src="./pic/twitter_logo.png" alt=""></a>  
+         </div>
+     </footer>
+
+     <script type="text/javascript">
+         var myState = {
+  pdf: null,
+  currentPage: 1,
+  zoom: 1
+}
+
+pdfjsLib.getDocument('./my_document.pdf').then((pdf) => {
+
+  myState.pdf = pdf;
+  render();
+
+});
+
+function render() {
+  myState.pdf.getPage(myState.currentPage).then((page) => {
+
+      var canvas = document.getElementById("pdf_renderer");
+      var ctx = canvas.getContext('2d');
+
+      var viewport = page.getViewport(myState.zoom);
+
+      canvas.width = viewport.width;
+      canvas.height = viewport.height;
+
+      page.render({
+          canvasContext: ctx,
+          viewport: viewport
+      });
+  });
+}
+
+document.getElementById('go_previous').addEventListener('click', (e) => {
+  if(myState.pdf == null || myState.currentPage == 1) 
+    return;
+  myState.currentPage -= 1;
+  document.getElementById("current_page").value = myState.currentPage;
+  render();
+});
+
+document.getElementById('go_next').addEventListener('click', (e) => {
+  if(myState.pdf == null || myState.currentPage > myState.pdf._pdfInfo.numPages) 
+     return;
+  myState.currentPage += 1;
+  document.getElementById("current_page").value = myState.currentPage;
+  render();
+});
+
+document.getElementById('current_page').addEventListener('keypress', (e) => {
+  if(myState.pdf == null) return;
+
+  // Get key code
+  var code = (e.keyCode ? e.keyCode : e.which);
+
+  // If key code matches that of the Enter key
+  if(code == 13) {
+      var desiredPage = 
+      document.getElementById('current_page').valueAsNumber;
+                        
+      if(desiredPage >= 1 && desiredPage <= myState.pdf._pdfInfo.numPages) {
+          myState.currentPage = desiredPage;
+          document.getElementById("current_page").value = desiredPage;
+          render();
+      }
+  }
+});
+
+document.getElementById('zoom_in').addEventListener('click', (e) => {
+  if(myState.pdf == null) return;
+  myState.zoom += 0.5;
+  render();
+});
+
+document.getElementById('zoom_out').addEventListener('click', (e) => {
+  if(myState.pdf == null) return;
+  myState.zoom -= 0.5;
+  render();
+});
+
+
+    const buttons = document.querySelectorAll('button');
+    const display = document.querySelector('.display');
+
+              buttons.forEach(function(button) {
+                button.addEventListener('click', calculate);
+              });
+
+              function calculate(event) {
+                const clickedButtonValue = event.target.value;
+
+                if (clickedButtonValue === '=') {
+                  if (display.value !== '') {
+                    display.value = eval(display.value);
+                  }
+                } else if (clickedButtonValue === 'C') {
+                  display.value = '';
+                } else {
+                  display.value += clickedButtonValue;
+                }
+              }
+
+
+
+    </script>
+
+
+
+
+    <script src="./js.js"></script>
+</body>
+</html>
